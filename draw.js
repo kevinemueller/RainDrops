@@ -15,7 +15,7 @@ class RainDrop {
         this.MinSize = 1;
         this.Maxsize = 5;
 
-        this.MinSpeed = 1;
+        this.MinSpeed = 2;
         this.MaxSpeed = 10;
 
         // Opacity
@@ -31,7 +31,7 @@ class RainDrop {
         this.speed = random(this.MinSpeed, this.MaxSpeed);
 
         // Set off screen YPos
-        this.YPos = -(random(10, 1000));
+        this.YPos = random(-1000, 0);
     }
 }
 
