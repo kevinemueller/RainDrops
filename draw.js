@@ -31,7 +31,7 @@ class RainDrop {
         this.speed = random(this.MinSpeed, this.MaxSpeed);
 
         // Set off screen YPos
-        this.YPos = -(random(10, 100));
+        this.YPos = -(random(10, 1000));
     }
 }
 
