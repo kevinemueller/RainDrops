@@ -64,7 +64,8 @@ function animate() {
         RainDrops[i].YPos+=RainDrops[i].speed;
 
         // reset variable when limit is reached
-        if(RainDrops[i].YPos >= window.innerHeight + 100 || (x >= RainDrops[i].XPos - RainDrops[i].size && x <= RainDrops[i].XPos + RainDrops[i].size && y <= RainDrops[i].YPos + RainDrops[i].size && y >= RainDrops[i].YPos - RainDrops[i].size)) {
+
+        if(RainDrops[i].YPos >= window.innerHeight + 100 || RainDrops[i].XPos >= window.innerWidth ||(x >= RainDrops[i].XPos - RainDrops[i].size && x <= RainDrops[i].XPos + RainDrops[i].size && y <= RainDrops[i].YPos + RainDrops[i].size && y >= RainDrops[i].YPos - RainDrops[i].size)) {
             RainDrops[i] = null;
             RainDrops[i] = new RainDrop();
         }
