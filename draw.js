@@ -58,7 +58,7 @@ function animate() {
     for(var i = 0; i < RainDrops.length; i++) {
         
         ctx.fillRect(RainDrops[i].XPos, RainDrops[i].YPos, RainDrops[i].size, RainDrops[i].size);
-        ctx.fillStyle = `rgba(255, 255, 255, ${RainDrops[i].opacity}`;
+        ctx.fillStyle = `rgba(0, 122, 125, ${RainDrops[i].opacity}`;
 
         // Update Y Pos
         RainDrops[i].YPos+=RainDrops[i].speed;
