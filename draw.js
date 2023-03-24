@@ -39,12 +39,11 @@ var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext('2d');
 
 // Rain Drops - (total drops)
-var RainDrops = new Array(5000);
+var RainDrops = new Array();
 
 // Create and define each raindrop
-for(var i = 0; i < RainDrops.length; i++) {
-    RainDrops[i] = new RainDrop();
-}
+for(var i = 0; i < 5000; i++)
+    RainDrops.push(new RainDrop());
 
 function animate() {
 
