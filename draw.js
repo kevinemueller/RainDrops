@@ -12,8 +12,8 @@ function mousePos(event) {
 
 class RainDrop {
     constructor() {
-        this.MinSize = 1;
-        this.Maxsize = 5;
+        this.MinSize = 0.5;
+        this.Maxsize = 2.5;
 
         this.MinSpeed = 2;
         this.MaxSpeed = 10;
@@ -39,14 +39,14 @@ var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext('2d');
 
 // Rain Drops - (total drops)
-var RainDrops = new Array();
+var RainDrops = new Array(5000);
 
 // Create and define each raindrop
-for(var i = 0; i < 5000; i++)
-    RainDrops.push(new RainDrop());
+for(var i = 0; i < RainDrops.length; i++)
+    RainDrops[i] = new RainDrop();
 
 function animate() {
-
+    
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight
 
