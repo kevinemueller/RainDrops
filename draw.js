@@ -12,17 +12,17 @@ function mousePos(event) {
 
 class RainDrop {
     constructor() {
-        this.MinSize = 0.5;
-        this.Maxsize = 2.5;
+        this.MinSize = 1;
+        this.Maxsize = 3;
 
-        this.MinSpeed = 2;
-        this.MaxSpeed = 10;
+        this.MinSpeed = 7;
+        this.MaxSpeed = 20;
 
         // Opacity
         this.opacity = Math.random();
 
         // Set X-Pos
-        this.XPos = random(1, window.innerWidth);
+        this.XPos = random(-100, window.innerWidth);
 
         // Set Size
         this.size = random(this.MinSize, this.Maxsize);
@@ -35,6 +35,7 @@ class RainDrop {
     }
 }
 
+// Canvas
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext('2d');
 
@@ -46,12 +47,14 @@ for(var i = 0; i < RainDrops.length; i++)
     RainDrops[i] = new RainDrop();
 
 function animate() {
-    
+
+    // Set Canvas width & height
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight
 
     requestAnimationFrame(animate);
 
+    // clear canvas
     ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
 
     for(var i = 0; i < RainDrops.length; i++) {
@@ -59,13 +62,12 @@ function animate() {
         ctx.fillStyle = `rgba(0, 122, 125, ${RainDrops[i].opacity}`;
         ctx.fillRect(RainDrops[i].XPos, RainDrops[i].YPos, RainDrops[i].size, RainDrops[i].size);
 
-        // Update Y Pos
+        // Update Y & X Pos
         RainDrops[i].YPos+=RainDrops[i].speed;
+        RainDrops[i].XPos+=1;
 
         // reset variable when limit is reached
-
         if(RainDrops[i].YPos >= window.innerHeight + 100 || RainDrops[i].XPos >= window.innerWidth || (x >= RainDrops[i].XPos - RainDrops[i].size && x <= RainDrops[i].XPos + RainDrops[i].size && y <= RainDrops[i].YPos + RainDrops[i].size && y >= RainDrops[i].YPos - RainDrops[i].size)) {
-            RainDrops[i] = null;
             RainDrops[i] = new RainDrop();
         }
     }
