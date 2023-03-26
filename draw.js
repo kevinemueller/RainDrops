@@ -2,11 +2,11 @@
 class RainDrop {
     constructor() {
         // Min & Max raindrop sizes
-        this.MinSize = 1;
+        this.MinSize = parseInt(document.getElementById("Rain-Size").min);
         this.Maxsize = parseInt(document.getElementById("Rain-Size").value);
 
         // Min & Max velocity
-        this.MinSpeed = 7;
+        this.MinSpeed = parseInt(document.getElementById("Rain-Speed").min);
         this.MaxSpeed = parseInt(document.getElementById("Rain-Speed").value);
 
         // Opacity
