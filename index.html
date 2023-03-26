@@ -17,24 +17,73 @@
             object-fit: cover;
         }
 
+        body {
+            background-color: #151515;
+            margin: 0;
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: auto;
+        }
+
+        input {
+            width: 100%;
+        }
+
         canvas {
             backdrop-filter: blur(5px);
         }
 
         img, canvas {
             position: absolute;
-            top: 0;
+            padding-top: 1%;
             left: 0;
             margin: 0;
+        }
+
+        table {
+            width: 100%;
+            padding: 2%;
+
+            color: azure;
+        }
+
+        td {
+            padding-left: 2%;
+            padding-right: 2%;
+            text-align: center;
+        }
+
+        input {
+            -webkit-appearance: none;
+            background: rgb(196, 196, 196);
+            border-radius: 5px;
+            height: 2.5px;
+            cursor: ew-resize;
         }
 
     </style>
 </head>
 <body onmousemove="mousePos(event)">
 
-    <img src="background.jpg" alt="" >
-    <canvas id="canvas"></canvas>
-    <script src="draw.js"></script>
+    <table id="nav-options">
+        <tr>
+            <th>Rain Velocity</th>
+            <th>Size</th>
+            <th>Direction</th>
+        </tr>
+        <tr>
+            <td><input id="Rain-Speed" type="range" min="1" max="100" value="20"></td>
+            <td><input id="Rain-Size" type="range" min="1" max="100" value="3"></td>
+            <td><input id="Rain-Direction" type="range" min="-10" max="10" value="0"></td>
+        </tr>
+    </table>
+
+    <section>
+        <img id="background-img" src="background.jpg" alt="" >
+        <canvas id="canvas"></canvas>
+        <script src="draw.js"></script>
+    </section>
+    
 
 </body>
 </html>
