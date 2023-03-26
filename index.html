@@ -64,6 +64,23 @@
             cursor: ew-resize;
         }
 
+        #Footer-Credit {
+            position: absolute;
+            bottom: 0;
+            margin: 0;
+
+            left: 25%;
+            right: 25%;
+            width: auto;
+            height: auto;
+
+            color: rgba(240, 255, 255, 0.24);
+            backdrop-filter: blur(5px);
+            text-align: center;
+            border-radius: 25px;
+            font-size: 75%;
+        }
+
     </style>
 </head>
 <body onmousemove="mousePos(event)">
@@ -87,6 +104,10 @@
             <td><input id="Rain-Amount" type="range" min="0" max="10000" value="5000"></td>
         </tr>
     </table>
+
+    <footer id="Footer-Credit">
+        <p style="padding: 1%;">Created By: Kevin Mueller</p>
+    </footer>
 
     
     <script src="draw.js"></script>
