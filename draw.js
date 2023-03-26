@@ -37,7 +37,9 @@ const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext('2d');
 
 // Rain Drops - (total drops).
-let RainDrops = new Array(5000);
+let RainDrops = new Array(parseInt(document.getElementById("Rain-Amount").max));
+
+console.log(document.getElementById("Rain-Amount").max);
 
 // Create and define each raindrop.
 for(let i = 0; i < RainDrops.length; i++)
@@ -66,7 +68,7 @@ function animate() {
     ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
 
     // Loop through each raindrop class and update it's variables
-    for(let i = 0; i < RainDrops.length; i++) {
+    for(let i = 0; i < parseInt(document.getElementById("Rain-Amount").value); i++) {
         
         // Rain Drop Style
         ctx.fillStyle = `rgba(0, 122, 125, ${RainDrops[i].opacity}`;

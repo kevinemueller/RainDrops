@@ -53,6 +53,10 @@
             text-align: center;
         }
 
+        th {
+            cursor: pointer;
+        }
+
         input {
             -webkit-appearance: none;
             background: rgb(196, 196, 196);
@@ -67,14 +71,16 @@
 
     <table id="nav-options">
         <tr>
-            <th>Rain Velocity</th>
-            <th>Size</th>
-            <th>Direction</th>
+            <th onclick="document.getElementById('Rain-Speed').value = 20;">Rain Velocity</th>
+            <th onclick="document.getElementById('Rain-Size').value = 3;">Size</th>
+            <th onclick="document.getElementById('Rain-Direction').value = 0;">Direction</th>
+            <th onclick="document.getElementById('Rain-Amount').value = 5000;">Amount</th>
         </tr>
         <tr>
             <td><input id="Rain-Speed" type="range" min="1" max="100" value="20"></td>
             <td><input id="Rain-Size" type="range" min="1" max="100" value="3"></td>
             <td><input id="Rain-Direction" type="range" min="-10" max="10" value="0"></td>
+            <td><input id="Rain-Amount" type="range" min="0" max="10000" value="5000"></td>
         </tr>
     </table>
 
