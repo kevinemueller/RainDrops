@@ -95,8 +95,6 @@ function animate() {
         ctx.fillStyle = `rgba(0, 122, 125, ${RainDrops[i].opacity})`;
 
         // Rain Drop
-        //ctx.fillRect(RainDrops[i].XPos, RainDrops[i].YPos, RainDrops[i].size, RainDrops[i].size);
-
         ctx.beginPath();
         ctx.arc(RainDrops[i].XPos, RainDrops[i].YPos, RainDrops[i].size, Math.PI, 3*Math.PI);
         ctx.fill();
