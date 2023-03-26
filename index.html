@@ -14,32 +14,25 @@
         img {
             width: 100%;
             height: 100%;
-            margin: 0;
-
-            position: absolute;
-            top: 0;
-            left: 0;
+            object-fit: cover;
         }
 
         canvas {
             backdrop-filter: blur(5px);
+        }
 
+        img, canvas {
             position: absolute;
             top: 0;
             left: 0;
             margin: 0;
-        }
-
-        body {
-            margin: 0;
-            background-color: rgb(255, 255, 255);
         }
 
     </style>
 </head>
 <body onmousemove="mousePos(event)">
 
-    <img src="background.jpg">
+    <img src="background.jpg" alt="" >
     <canvas id="canvas"></canvas>
     <script src="draw.js"></script>
 
