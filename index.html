@@ -18,15 +18,9 @@
         }
 
         body {
-            background-color: #151515;
             margin: 0;
-
             font-family: Arial, Helvetica, sans-serif;
             font-size: auto;
-        }
-
-        input {
-            width: 100%;
         }
 
         canvas {
@@ -35,21 +29,24 @@
 
         img, canvas {
             position: absolute;
-            padding-top: 1%;
             left: 0;
             margin: 0;
         }
 
         table {
-            width: 100%;
+            position: relative;
+            width: 90%;
+            left: 5%;
+            right: 5%;
             padding: 2%;
 
             color: azure;
+            background-color: #1515155e;
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
         }
 
         td {
-            padding-left: 2%;
-            padding-right: 2%;
             text-align: center;
         }
 
@@ -58,6 +55,8 @@
         }
 
         input {
+            width: 85%;
+
             -webkit-appearance: none;
             background: azure;
             border-radius: 5px;
@@ -69,12 +68,17 @@
 </head>
 <body onmousemove="mousePos(event)">
 
+    <section>
+        <img id="background-img" src="background.jpg" alt="" >
+        <canvas id="canvas"></canvas>
+    </section>
+
     <table>
         <tr>
             <th title="Click to Reset Value" onclick="document.getElementById('Rain-Speed').value = 20;">Rain Velocity ⤺</th>
             <th title="Click to Reset Value" onclick="document.getElementById('Rain-Size').value = 3;">Size ⤺</th>
             <th title="Click to Reset Value" onclick="document.getElementById('Rain-Direction').value = 0;">Direction ⤺</th>
-            <th title="Click to Reset Value" onclick="document.getElementById('Rain-Amount').value = 5000;">Amount ⤺</th>
+            <th title="Click to Reset Value" onclick="document.getElementById('Rain-Amount').value = 2500;">Amount ⤺</th>
         </tr>
         <tr>
             <td><input id="Rain-Speed" type="range" min="1" max="100" value="20"></td>
@@ -84,12 +88,8 @@
         </tr>
     </table>
 
-    <section>
-        <img id="background-img" src="background.jpg" alt="" >
-        <canvas id="canvas"></canvas>
-        <script src="draw.js"></script>
-    </section>
     
-
+    <script src="draw.js"></script>
+    
 </body>
 </html>
