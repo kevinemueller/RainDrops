@@ -21,10 +21,13 @@
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
             font-size: auto;
+
+            background-color: black;
         }
 
         canvas {
             backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
         }
 
         img, canvas {
@@ -43,7 +46,10 @@
             color: azure;
             background-color: #1515155e;
             backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             border-radius: 30px;
+
+            font-size: 80%;
         }
 
         td {
@@ -76,9 +82,10 @@
 
             color: rgba(240, 255, 255, 0.24);
             backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
             text-align: center;
             border-radius: 25px;
-            font-size: 75%;
+            font-size: 70%;
         }
 
     </style>
@@ -92,16 +99,16 @@
 
     <table>
         <tr>
-            <th title="Click to Reset Value" onclick="document.getElementById('Rain-Speed').value = 20;">Rain Velocity ⤺</th>
-            <th title="Click to Reset Value" onclick="document.getElementById('Rain-Size').value = 3;">Size ⤺</th>
+            <th title="Click to Reset Value" onclick="document.getElementById('Rain-Speed').value = 10;">Rain Velocity ⤺</th>
+            <th title="Click to Reset Value" onclick="document.getElementById('Rain-Size').value = 20;">Size ⤺</th>
             <th title="Click to Reset Value" onclick="document.getElementById('Rain-Direction').value = 0;">Direction ⤺</th>
-            <th title="Click to Reset Value" onclick="document.getElementById('Rain-Amount').value = 2500;">Amount ⤺</th>
+            <th title="Click to Reset Value" onclick="document.getElementById('Rain-Amount').value = 500;">Amount ⤺</th>
         </tr>
         <tr>
-            <td><input id="Rain-Speed" type="range" min="1" max="100" value="20"></td>
-            <td><input id="Rain-Size" type="range" min="1" max="100" value="3"></td>
+            <td><input id="Rain-Speed" type="range" min="1" max="100" value="10"></td>
+            <td><input id="Rain-Size" type="range" min="1" max="100" value="20"></td>
             <td><input id="Rain-Direction" type="range" min="-10" max="10" value="0"></td>
-            <td><input id="Rain-Amount" type="range" min="0" max="10000" value="5000"></td>
+            <td><input id="Rain-Amount" type="range" min="0" max="10000" value="500"></td>
         </tr>
     </table>
 
